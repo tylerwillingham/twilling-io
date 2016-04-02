@@ -1,13 +1,56 @@
 ---
-title: Welcome to Middleman
+title: Tyler Willingham - Web Application Engineer
 ---
 
-<div class="welcome">
-  <div class="logo">
-    <%= image_tag "middleman-logo.svg" %>
+<div class="header">
+  <div class="header-left">
+    <h2>TWILLING.IO</h2>
   </div>
-  <h1>Middleman is Running</h1>
-  <p class="doc">
-    <%= link_to "Read Documentation Online", "https://middlemanapp.com", target: "_blank" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+
+  <div class="header-right">
+    <ul class="primary-nav">
+      <li class="primary-nav-item">
+        <a href="">BLOG</a>
+      </li>
+      <li class="primary-nav-item">
+        <a href="">RESUME</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="clear"></div>
+</div>
+
+<div class="articles-container">
+  <article>
+    <div class="article-header">
+      <h3 class="heading-1">On composing better commits and squashing less.</h3>
+    </div>
+
+    <div class="article-meta">
+      Posted on March 27, 2016
+    </div>
+
+    <div class="article-body">
+      <p>Some people ❤ to squash. I do not love to squash my commits. I like to be
+      deliberate about what I’m committing and when I’m committing it. Because I am
+      deliberate about this, I don’t like squashing. Squashing hides my history.</p>
+
+      <p>A feature was recently added to an app that I work on. That feature
+      trickled down to 3–5 different places within our application. I’m very familiar
+      with one of those sections of the application so it seemed logical to me to
+      look for the commit that encapsulated the feature that was implementation
+      for this section.</p>
+
+      <p>A little part of me died inside when I found out there was only
+      1 commit which encapsulated the creation of a new library and it’s implementation
+      throughout the app. Now instead of seeing the changes in isolation I have to
+      comb through the entire diff and hope that I don’t miss anything.</p>
+
+      <p>If your repo were a book, your feature branches would be your chapters,
+      and your commits your paragraphs. Imagine reading a book that’s just a bunch
+      of words with arbitrary indentation to provide the illusion of a paragraph.</p>
+    </div>
+  </article>
+
+</div>
