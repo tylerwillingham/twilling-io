@@ -1,5 +1,7 @@
 ---
 title: Tyler Willingham - Web Application Engineer
+pageable: true
+per_page: 10
 ---
 
 <div class="header">
@@ -22,35 +24,31 @@ title: Tyler Willingham - Web Application Engineer
 </div>
 
 <div class="articles-container">
+  <% page_articles.each do |article| %>
   <article>
     <div class="article-header">
-      <h3 class="heading-1">On composing better commits and squashing less.</h3>
+      <h3 class="heading-1">
+        <%= link_to article.title, article %>
+      </h3>
     </div>
 
     <div class="article-meta">
-      Posted on March 27, 2016
+      Posted on <%= article.date.strftime('%b, %e') %>
     </div>
 
     <div class="article-body">
-      <p>Some people ❤ to squash. I do not love to squash my commits. I like to be
-      deliberate about what I’m committing and when I’m committing it. Because I am
-      deliberate about this, I don’t like squashing. Squashing hides my history.</p>
-
-      <p>A feature was recently added to an app that I work on. That feature
-      trickled down to 3–5 different places within our application. I’m very familiar
-      with one of those sections of the application so it seemed logical to me to
-      look for the commit that encapsulated the feature that was implementation
-      for this section.</p>
-
-      <p>A little part of me died inside when I found out there was only
-      1 commit which encapsulated the creation of a new library and it’s implementation
-      throughout the app. Now instead of seeing the changes in isolation I have to
-      comb through the entire diff and hope that I don’t miss anything.</p>
-
-      <p>If your repo were a book, your feature branches would be your chapters,
-      and your commits your paragraphs. Imagine reading a book that’s just a bunch
-      of words with arbitrary indentation to provide the illusion of a paragraph.</p>
+      <%= article.body %>
     </div>
   </article>
+  <% end %>
 
+  <% if paginate %>
+    <% if prev_page %>
+      <p><%= link_to 'Previous page', prev_page %></p>
+    <% end %>
+
+    <% if next_page %>
+      <p><%= link_to 'Next page', next_page %></p>
+    <% end %>
+  <% end %>
 </div>
