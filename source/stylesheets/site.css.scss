@@ -20,6 +20,10 @@ body {
   line-height:  1.67em;
 }
 
+p {
+  margin-bottom: 1.67rem;
+}
+
 a {
   color:            transparentize($offblack, 0.4);
   font-weight:      bold;
@@ -102,6 +106,8 @@ h2,
   max-width:  750px;
 
   article {
+    margin-bottom: 2.22rem;
+
     .article-header {
       text-align: center;
 
@@ -118,8 +124,18 @@ h2,
     }
 
     .article-body {
-      max-width: 600px;
-      margin: 0 auto;
+      max-width:  600px;
+      margin:     0 auto;
+    }
+
+    hr {
+      border-color: transparentize($offblack, 0.8);
+      margin:       4.44rem auto;
+      max-width:    60%;
+    }
+
+    &:last-child > .article-divider {
+      display: none;
     }
   }
 }
