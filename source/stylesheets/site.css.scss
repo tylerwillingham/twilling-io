@@ -20,6 +20,17 @@ body {
   line-height:  1.67em;
 }
 
+a {
+  color:            transparentize($offblack, 0.4);
+  font-weight:      bold;
+  text-decoration:  none;
+  transition:       color 0.25s;
+
+  &:hover {
+    color: transparentize($offblack, 0.2);
+  }
+}
+
 h1,
 .heading-1 {
   font-size: 2rem;
@@ -86,9 +97,9 @@ h2,
 }
 
 .articles-container {
-  margin: 5.5rem auto 0 auto;
-  width: 100%;
-  max-width: 750px;
+  margin:     5.5rem auto 0 auto;
+  width:      100%;
+  max-width:  750px;
 
   article {
     .article-header {
@@ -115,4 +126,47 @@ h2,
 
 .clear {
   clear: both;
+}
+
+
+// Animations
+
+.index .header {
+  position:   relative;
+  animation:  header-animation 0.25s ease-out;
+}
+
+.index .articles-container {
+  position:   relative;
+  animation:  articles-container-animation 0.45s ease-out;
+}
+
+@keyframes header-animation {
+  0% { top: -5rem; }
+  100% { top: 0; }
+}
+
+@keyframes articles-container-animation {
+  0% {
+    opacity:  0;
+    left:     -100vh;
+  }
+
+  30% {
+    opacity:  0;
+    left:     -100vh;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  95% {
+    left: 5vh;
+  }
+
+  100% {
+    opacity:  1;
+    left:     0;
+  }
 }
