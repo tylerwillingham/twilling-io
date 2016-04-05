@@ -94,6 +94,7 @@ GEM
       rack (~> 1.4)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rake (11.1.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -118,8 +119,8 @@ DEPENDENCIES
   middleman (~> 4.0.0)
   middleman-blog (>= 4.0.0)
   puma
-  rack
   rack-contrib
+  rake
   redcarpet (~> 3.3, >= 3.3.3)
 
 BUNDLED WITH
