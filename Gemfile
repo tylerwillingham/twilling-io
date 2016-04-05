@@ -2,6 +2,9 @@
 # the following line to use 'http://'
 source 'https://rubygems.org'
 
+gem 'puma'
+gem 'rack-contrib'
+
 # Middleman Gems
 gem 'middleman', '~> 4.0.0'
 gem "middleman-blog", '>= 4.0.0'
