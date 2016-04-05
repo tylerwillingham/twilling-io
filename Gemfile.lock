@@ -118,6 +118,7 @@ DEPENDENCIES
   middleman (~> 4.0.0)
   middleman-blog (>= 4.0.0)
   puma
+  rack
   rack-contrib
   redcarpet (~> 3.3, >= 3.3.3)
 
