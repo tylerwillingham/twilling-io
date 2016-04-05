@@ -1,0 +1,17 @@
+<% wrap_layout:layout do %>
+  <div class="articles-container">
+    <article class="container">
+      <div class="article-header">
+        <h1 class="text-center"><%= current_article.title %></h1>
+      </div>
+
+      <div class="article-meta">
+        Posted on <%= current_article.date.strftime('%B %e, %Y') %>
+      </div>
+
+      <div class="article-body">
+        <%= current_article.body %>
+      </div>
+    </article>
+  </div>
+<% end %>

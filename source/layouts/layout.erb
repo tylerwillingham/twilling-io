@@ -6,15 +6,32 @@
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Middleman" %></title>
-
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <title><%= current_page.data.title || 'Tyler Willingham - Web Application Engineer' %></title>
 
     <%= stylesheet_link_tag :site %>
     <%= javascript_include_tag :all %>
   </head>
 
   <body class="<%= page_classes %>">
+    <div class="header">
+      <div class="header-left">
+        <h2>TWILLING.IO</h2>
+      </div>
+
+      <div class="header-right">
+        <ul class="primary-nav">
+          <li class="primary-nav-item">
+            <a href="" class="active">BLOG</a>
+          </li>
+          <li class="primary-nav-item">
+            <a href="https://github.com/tylerwillingham/resume" target="_blank">RESUME</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="clear"></div>
+    </div>
+
     <%= yield %>
   </body>
 </html>
